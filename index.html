@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Weather Forecast App</title>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<main class="app-container">
+<header class="app-header">
+<h1>Weather Forecast</h1>
+<div class="controls">
+<input id="cityInput" type="search" placeholder="Search city (e.g. London)" aria-label="Search city" />
+<button id="searchBtn">Search</button>
+<button id="geoBtn" title="Use device location">📍</button>
+<select id="unitsSelect" aria-label="Units">
+<option value="metric">°C</option>
+<option value="imperial">°F</option>
+</select>
+</div>
+</header>
+
+
+<section id="card" class="weather-card hidden">
+<div class="top">
+<div class="location">
+<h2 id="cityName"></h2>
+<p id="country"></p>
+</div>
+<div class="temp-group">
+<img id="weatherIcon" alt="weather icon" />
+<div>
+<p id="temperature" class="temp"></p>
+<p id="description" class="desc"></p>
+</div>
+</div>
+</div>
+
+
+<div class="details">
+<div>Humidity: <span id="humidity"></span></div>
+<div>Wind: <span id="wind"></span></div>
+<div>Pressure: <span id="pressure"></span></div>
+</div>
+</section>
+
+
+<p id="message" class="message"></p>
+
+
+<footer class="app-footer">
+<small>Data from OpenWeatherMap · Built with HTML/CSS/JS</small>
+</footer>
+</main>
+
+
+<script src="script.js"></script>
+</body>
+</html>
